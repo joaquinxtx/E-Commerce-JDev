@@ -67,7 +67,7 @@ export const Cart = () => {
 }
   return (<>
             <Title>
-              Carrito
+              Cart
             </Title>
             <CartContainer>
               <CartItems>
