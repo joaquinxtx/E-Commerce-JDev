@@ -20,7 +20,7 @@ En este proyecto se creo un e-commerce simulado usando principalmente React comp
 - GITHUB💾
 # Page
 
-This project was bootstrapped with [click to see the app // click para ver la app🚀🚀🚀](https://joaquinxtx.github.io/).
+This project was bootstrapped with [click to see the app // click para ver la app🚀🚀🚀](https://astonishing-biscuit-1e3b45.netlify.app/).
 
 
 
