@@ -1,0 +1,43 @@
+.navBar{
+    height: 50px;
+    background-color: rgb(192, 37, 10);
+    font-size: 15px;
+    display: flex;
+    justify-content: space-around; 
+    align-items: center;
+    color: rgb(243, 239, 239);
+    margin-left: 100px;  
+    border-bottom: 2px solid white;
+}
+.titleNavBar{
+
+    margin-left: 15px;
+    font-size: 30px;
+    cursor: pointer; 
+}
+.seeker{
+    width: 300px;
+    font-size: large;
+    height: 30px;
+    border-radius: 5px;
+}
+.trolleyC{
+    width: 70px;
+}
+.trolleyC span{
+    margin: 5px;
+   
+    color: rgb(240, 240, 241);
+    font-weight: 800;
+    
+}
+
+@media screen and (max-width:900px){
+    .navBar{
+        margin-left: 0;
+    }
+    .seeker{
+        width: 200px;
+        height: 20px;
+    }
+}

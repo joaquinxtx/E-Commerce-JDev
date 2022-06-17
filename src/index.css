@@ -5,9 +5,17 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+ 
+  background-image: url(https://cdn.wallpapersafari.com/75/92/5aU3Oj.jpg) ;
+  background-image: url(https://i.pinimg.com/736x/d1/3d/95/d13d952e822f63f915c7b5d81628d833--texture.jpg) ;
+  background-size: cover;
+  
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
+
+

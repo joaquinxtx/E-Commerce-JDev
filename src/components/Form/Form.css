@@ -1,0 +1,47 @@
+
+.formInput{
+    width: 80%;
+    background: none;
+    color: rgba(247, 247, 252, 0.973);
+    font-size: 1rem;
+    padding: .6em 3em;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #a10f0f6e;
+}
+.formInput:focus + .formLabel, 
+.formInput:not(:placeholder-shown)+ .formLabel{
+    transform: translateY(-12px) scale(.7);
+    transform-origin: left top;
+    color:azure;
+}
+
+.formLabel{
+    color: rgba(240, 248, 255, 0.425);
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    left: 6px;
+    transform: translateY(10px);
+    transition:  transform .5s, color .3s;
+}
+
+
+.formLine{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: #a10f0f;
+    transform: scale(0);
+    transform: left bottom;
+    transition: transform .4s;
+}
+
+.formInput:focus ~ .formLine,
+.formInput:not(:placeholder-shown)~ .formLine{
+    transform: scale(1);
+
+}
+
