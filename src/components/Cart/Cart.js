@@ -2,8 +2,10 @@ import React, { useState } from 'react'
 import { useCartContext } from '../../context/CartContext'
 import { addDoc, collection, documentId, getDocs, getFirestore, query, where, writeBatch } from 'firebase/firestore'
 import swal from 'sweetalert'
-import { CartButtons, CartContainer, CartItems, Title } from './Cart.elements'
+import { CartButtons, CartContainer, CartEmpty, CartEmptyimg, CartItems, CartLink,  Title } from './Cart.elements'
 import { Form } from '../Form/Form'
+import { Link } from 'react-router-dom'
+
 
 export const Cart = () => {
   const{cartList,removeItem,clearCart,totalPrice}= useCartContext()
@@ -69,28 +71,42 @@ export const Cart = () => {
             <Title>
               Cart
             </Title>
-            <CartContainer>
-              <CartItems>
-                {cartList.map(product =><div key={product.id}>
-                  <li> 
-                    -Product : {product.name}  |
-                    -Price : {product.price} $  |
-                    -Waist : {product.waist}   | 
-                    -Quantity : {product.cant}
-                  </li>
-                  <CartButtons onClick={()=> removeItem(product.id)}>
-                     X
-                  </CartButtons>
-                </div>)}
-              </CartItems>
-              <h2>
-                The total price is : {totalPrice()}$ 
-              </h2>
-              <CartButtons onClick={()=>clearCart()}>
-                 Empty Cart🗑
-              </CartButtons>  
-            </CartContainer>
-            <Form form={form}  handleChange={handleChange} checkout={checkout} submitProd='Finish buying' />
+            {cartList.length ? (
+              <> 
+                <CartContainer>
+                  <CartItems>
+                    {cartList.map(product =><div key={product.id}>
+                      <li> 
+                        -Product : {product.name}  |
+                        -Price : {product.price} $  |
+                        -Waist : {product.waist}   | 
+                        -Quantity : {product.cant}
+                      </li>
+                      <CartButtons onClick={()=> removeItem(product.id)}>
+                        X
+                      </CartButtons>
+                    </div>)}
+                  </CartItems>
+                  <h2>
+                    The total price is : {totalPrice()}$ 
+                  </h2>
+                  <CartButtons onClick={()=>clearCart()}>
+                    Empty Cart🗑
+                  </CartButtons>  
+                </CartContainer>
+                <Form form={form}  handleChange={handleChange} checkout={checkout} submitProd='Finish buying' />
+              </>
+            )
+            :
+            (
+              <CartEmpty>
+              <Link to={"/"}>
+                <CartEmptyimg src={'https://i.pinimg.com/736x/2e/ac/fa/2eacfa305d7715bdcd86bb4956209038--android.jpg'} />
+                
+              </Link>
+            </CartEmpty>
+            )}
+
           </>
   )
 }

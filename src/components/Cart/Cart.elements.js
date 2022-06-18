@@ -42,3 +42,26 @@ export const CartButtons = styled.button`
     border: none;
     border-radius: .5em;
 `
+
+export const CartEmpty=styled.div`
+    margin-left:415px;
+    margin-bottom:50px;
+    @media screen and (max-width:500px){
+        font-size: 60px;
+        margin:auto;
+    }
+    
+    
+    ` 
+    
+export const CartEmptyimg=styled.img`
+    border-radius:20px;
+    @media screen and (max-width:500px){ 
+        border-radius:0px;
+        width:100%;
+        height:359px;
+   }
+
+`
+
+
